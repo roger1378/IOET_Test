@@ -37,14 +37,6 @@ namespace IOET
                 };
             }
 
-            //if ((day != "MO") && (day != "TU") && (day != "WE") && (day != "TH") && (day != "FR") && (day != "SA") && (day != "SU")) {
-            //    return new ErrorResponse
-            //    {
-            //        IsError = true,
-            //        ErrorMessage = $"Day {day} is not valid."
-            //    };
-            //}
-
             if ((TimeOnly.Parse(hr[0]) > TimeOnly.Parse("23:59")) || (TimeOnly.Parse(hr[1]) > TimeOnly.Parse("23:59"))) {
                 return new ErrorResponse
                 {
